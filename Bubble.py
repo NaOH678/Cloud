@@ -1,14 +1,12 @@
+# Bubble Sort
+def bubble(used_list) -> list:
+    NUMBER = len(used_list)
 
-# TODO: What's the shape of input?
+    for i in range(NUMBER - 1):
+        for j in range(NUMBER - 1):
+            if used_list[j] > used_list[j + 1]:
+                temp = used_list[j + 1]
+                used_list[j + 1] = used_list[j]
+                used_list[j] = temp
 
-used_list = [3, 4, 2, 1, 5]
-NUMBER = len(used_list)
-
-for i in range(NUMBER-1):
-    for j in range(NUMBER-1):
-        if used_list[j] > used_list[j+1]:
-            temp = used_list[j+1]
-            used_list[j+1] = used_list[j]
-            used_list[j] = temp
-
-print(used_list)
+    return used_list
